@@ -62,7 +62,7 @@ function renderizarTarea(){
 }
 
 function startbuttonHandler(id){
-    tiempo = 5;
+    tiempo = 25 * 60;
     tareaActual = id;
     const tareaIndex = tareas.findIndex((tarea) => tarea.id == id);
     const nombreTarea = document.querySelector("#tiempo #nombreTarea");
@@ -88,7 +88,7 @@ function timeHanlder(id){
 }
 
 function empezarDescanso(){
-  tiempo = 5 ;
+  tiempo = 5 * 60 ;
   nombreTarea.textContent = "Descanso";
   renderizarTiempo();
   tiempoDescanso = setInterval(()=>{tiempoDescansoHanlder()},1000);
